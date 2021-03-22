@@ -1,9 +1,10 @@
-export class Paciente{
-    nombres: string;
+export  interface Paciente{
+    
     id:  number;
+    nombres: string;
     apellidos: string;
     fecha_nacimiento: string;
     tipo_de_documento: string;
     numero_documento: number;
-    teléfono: number;
+    telefono: number;
 }
