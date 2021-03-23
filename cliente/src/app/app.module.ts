@@ -12,10 +12,17 @@ import { PacienteComponent } from './paciente/paciente.component';
 import {MatInputModule} from '@angular/material/input';
 import {PacienteService} from './paciente/paciente.service';
 import {RouterModule,Routes} from '@angular/router'
+import { HttpClientModule } from '@angular/common/http';
+import { FormComponent } from './paciente/form.component';
+import {FormsModule} from '@angular/forms';
+
+
 
 
 const routes: Routes =[
-  {path:'clientes',component:PacienteComponent}
+  {path:'paciente',component:PacienteComponent},
+  {path:'paciente/form',component:FormComponent},
+  {path:'paciente/form/:id',component:FormComponent}
 ]
 
 
@@ -29,11 +36,12 @@ const routes: Routes =[
     FooterComponent,
     DirectivaComponent,
     PacienteComponent,
+    FormComponent,
     
     
   ],
   imports: [
-    BrowserModule, 
+    BrowserModule, HttpClientModule,
     MatPaginatorModule,
     MatSortModule,
     BrowserAnimationsModule,MatTableModule, 
@@ -41,6 +49,7 @@ const routes: Routes =[
    MatPaginatorModule,
     MatSortModule,
     MatTableModule,
+    FormsModule,
     RouterModule.forRoot(routes)
   ],
   providers: [PacienteService],
