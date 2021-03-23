@@ -1,6 +1,6 @@
 <div class="container align-content-md-center ">
     <h2 class="text-center">Busqueda </h2>
-    <input class="text-center" matInput (keyup)="applyFilter($event)" placeholder="Filtrar" #input>
+    <input class="text-center" name="filterPaciente" placeholder="Filtrar" [(ngModel)]="filterPaciente">
 
 </div>
 
@@ -19,7 +19,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let paciente of pacientes">
+        <tr *ngFor="let paciente of pacientes | filter : filterPaciente">
             <td>{{paciente.id}}</td>
             <td>{{paciente.nombres}}</td>
             <td>{{paciente.apellidos}}</td>

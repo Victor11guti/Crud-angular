@@ -15,6 +15,7 @@ import {RouterModule,Routes} from '@angular/router'
 import { HttpClientModule } from '@angular/common/http';
 import { FormComponent } from './paciente/form.component';
 import {FormsModule} from '@angular/forms';
+import { FilterPipe } from './filter.pipe';
 
 
 
@@ -37,6 +38,7 @@ const routes: Routes =[
     DirectivaComponent,
     PacienteComponent,
     FormComponent,
+    FilterPipe,
     
     
   ],

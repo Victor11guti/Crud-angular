@@ -30,7 +30,7 @@ export class PacienteComponent implements AfterViewInit ,OnInit{
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
-
+  filterPaciente ='';
   constructor(private  pacienteService : PacienteService) {
   
   }
