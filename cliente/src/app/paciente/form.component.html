@@ -32,8 +32,13 @@
             </div>
             <div class="form-group row">
                 <label for="Tipo_documento" class="col-form lable col-sm-2">tipo de documento </label>
-                <div class="col-sm-6">
-                    <input type="text" class="form-control" [(ngModel)]="paciente.tipo_de_documento" name="tipo_de_documento" required></div>
+
+                <select class="col-sm-6" aria-label="Default select example " [(ngModel)]="paciente.tipo_de_documento" name="tipo_de_documento" required>
+                        <option selected></option>
+                        <option value="c">CC</option>
+                        <option value="2">TI</option>
+                        <option value="3">RC</option>
+                      </select>
             </div>
             <div class="form-group row">
                 <label for="numero_documento" class="col-form lable col-sm-2">Numero de documento </label>
