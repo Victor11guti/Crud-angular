@@ -45,9 +45,9 @@ export class FormComponent implements OnInit {
   }
 
   update():void {
-    this.pacienteservice.update(this.paciente).subscribe( paciente =>{
+    this.pacienteservice.update(this.paciente).subscribe( json =>{
       this.router.navigate(['/paciente'])
-      Swal.fire('Paciente actualizado',`Paciente ${paciente.nombres} `,'success')
+      Swal.fire('Paciente actualizado',`Paciente ${json.nombres} `,'success')
     }
     )
   }
